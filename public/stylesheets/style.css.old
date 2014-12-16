@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* TOP */
+.entryArea {
+  text-align: center;
+  vertical-align: center;
+}
+
+.entryContainer {
+  float: left;
+  width: 150px;
+  height: 30px;
+  border-style: solid;
+  border-width: 1px;
+}
+

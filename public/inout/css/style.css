@@ -1,0 +1,372 @@
+@CHARSET "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+	color: #f3791a;
+	font-weight: normal;
+	font-family: "メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",sans-serif;
+}
+body{
+	margin-bottom: 20px;
+	word-wrap: break-word;
+	background-color: #fff7cd;
+	font-size: 15px;
+}
+ul{ 
+	list-style-type: none; 
+}
+img{
+	border: none;
+}
+input{
+	outline: none;
+}
+
+
+/*  link  ------------------------------*/
+a{
+	color: #efc074;
+	text-decoration: none;
+}
+a:hover{
+	color: #f3791a;
+}
+a:hover img{
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+}
+
+
+/*  float  ------------------------------*/
+.pull-left{
+	float: left !important;
+}
+.pull-right{
+	float: right !important;
+}
+
+
+/*  clearfix  ------------------------------*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+
+/*  end  ------------------------------*/
+.left-end{
+	margin-left: 0 !important;
+}
+.right-end{
+	margin-right: 0 !important;
+}
+
+
+/*  margin  ------------------------------*/
+.m-top-20{
+	margin-top: 20px !important;
+}
+.m-top-40{
+	margin-top: 40px !important;
+}
+.m-top-60{
+	margin-top: 60px !important;
+}
+
+
+/*  position  ------------------------------*/
+.p-relative{
+	position: relative;
+}
+
+
+/*  opacity  ------------------------------*/
+.op-0{
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+}
+
+
+/*  text-align  ------------------------------*/
+.text-center{
+	text-align: center;
+}
+
+
+/*  list  ------------------------------*/
+ul.list-inline li{
+	display: inline-block;
+}
+
+
+/*------------------------------
+ container
+------------------------------*/
+.container{
+	margin: 0 auto;
+	padding: 0 43px;
+	width: 938px;
+}
+.container.container-user-select{
+	padding-top: 170px;
+	position: relative;
+}
+.container.container-room-select{
+	padding-top: 25px;
+	position: relative;
+}
+.container.container-room-select p{
+	padding-bottom: 80px;
+	font-size: 29px;
+}
+.container.container-pin{
+	padding-top: 190px;
+	position: relative;
+}
+.container.container-answer-top{
+	padding-top: 36px;
+	position: relative;
+}
+
+
+/*------------------------------
+ button
+------------------------------*/
+.btn-top,
+.btn-back{
+	position: absolute;
+	top: 7px;
+	left: 43px;
+	vertical-align: middle;
+}
+.btn-user-select{
+	margin: 0 45px;
+}
+.btn-room-select{
+	margin: 0 6px 12px;
+}
+.btn-room-grayout{
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: gray; 	
+}
+.btn-answer{
+	margin: 0 3px 5px;
+}
+.btn-ok,
+.btn-question{
+	margin-top: 14px;
+}
+
+
+/*------------------------------
+ pin
+------------------------------*/
+.pin-input{
+	display: block;
+	margin: 0 auto;
+	padding: 20px;
+	width: 606px;
+	height: 100px;
+	
+	line-height: 100px;
+	font-size: 38px;
+	color: #5b4e41;
+	text-align: center;
+	
+	border: solid 2px #f69e5a;
+	border-radius: 8px;
+	-webkit-box-shadow: 2px 3px 1px #d5cca2;
+	box-shadow: 2px 3px 1px #d5cca2;
+}
+.pin-output{
+	margin: 0 auto;
+	width: 646px;
+	height: 144px;
+	
+	line-height: 144px;
+	font-size: 38px;
+	color: #5b4e41;
+}
+
+
+/*------------------------------
+ graph-pie
+------------------------------*/
+#area-graph-pie{
+	position: relative;
+	height: 565px;
+}
+.graph-pie{
+	position:absolute;
+	margin: 42px 0 0 220px;
+}
+
+/*  label  ------------------------------*/
+.label-pie{
+	position: absolute;
+}
+#label-pie-a{
+	top: 43px;
+	right: 53px;
+}
+#label-pie-b{
+	bottom: 22px;
+	right: 53px;
+}
+#label-pie-c{
+	bottom: 22px;
+	left: 63px;
+}
+#label-pie-d{
+	top: 43px;
+	left: 63px;
+}
+
+/*  number  ------------------------------*/
+.num-pie{
+	position: absolute;
+}
+#num-pie-a-1{
+	top: 69px;
+	right: 76px;
+}
+#num-pie-b-1{
+	bottom: 46px;
+	right: 76px;
+}
+#num-pie-c-1{
+	bottom: 46px;
+	left: 229px;
+}
+#num-pie-d-1{
+	top: 69px;
+	left: 229px;
+}
+#num-pie-a-10{
+	top: 69px;
+	right: 129px;
+}
+#num-pie-b-10{
+	bottom: 46px;
+	right: 129px;
+}
+#num-pie-c-10{
+	bottom: 46px;
+	left: 176px;
+}
+#num-pie-d-10{
+	top: 69px;
+	left: 176px;
+}
+
+
+/*  1up  ------------------------------*/
+.one-up{
+	position: absolute;
+	visibility: hidden;
+	
+	filter: alpha(opacity=100);
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+.one-up.on{
+	filter: alpha(opacity=0);
+	opacity: 0;
+	-webkit-transform: translateY(-35px);
+	-o-transform: translateY(-35px);
+	transform: translateY(-35px);
+	
+	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.055, 0.860, 0.365, 0.950), opacity 0.5s ease-in; 
+	-o-transition: -o-transform 0.5s cubic-bezier(0.055, 0.860, 0.365, 0.950), opacity 0.5s ease-in; 
+	transition: transform 0.5s cubic-bezier(0.055, 0.860, 0.365, 0.950), opacity 0.5s ease-in; 
+}
+#one-up-a{
+	top: 33px;
+	right: 55px;
+}
+#one-up-b{
+	bottom: 50px;
+	right: 55px;
+}
+#one-up-c{
+	bottom: 50px;
+	left: 166px;
+}
+#one-up-d{
+	top: 33px;
+	left: 166px;
+}
+
+
+/*------------------------------
+ #link-select-graph
+------------------------------*/
+#link-select-graph{
+	padding-top: 18px;
+	padding-left: 70px;
+}
+#link-select-graph ul li{
+	padding: 0 50px;
+	font-size: 21px;
+}
+
+
+/*------------------------------
+ dialog
+------------------------------*/
+.dialog{
+	display: none;
+}
+.ui-dialog-titlebar{
+	display: none;
+}
+.ui-dialog .ui-dialog-buttonpane{
+	border-width: 0;
+}
+.ui-dialog p{
+	text-align: center;
+}
+.ui-dialog .ui-dialog-buttonpane button{
+	margin: 0 180px 0;
+}
+.ui-dialog.ui-dialog-confirm .ui-dialog-buttonpane button{
+	/*margin: 0 0 0 20px;*/
+}
+.ui-button-text-only .ui-button-text{
+	padding: 5px 40px;
+}
+
+.ui-widget-content{
+	/*border: 4px solid #ff9900;*/
+	background:none #fff;
+	border: solid 2px #f69e5a;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br{
+	border-radius:8px;
+}
+.ui-button.ui-corner-all{
+	border-radius:4px;
+}
+.ui-widget-overlay{
+	/*background: none #eee;
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	opacity: 0.8;*/
+}

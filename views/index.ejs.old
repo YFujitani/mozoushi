@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=1024">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-transluecent">
+    <title><%= title %></title>
+    <link rel='stylesheet' href="/stylesheets/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" none;" id="clearPaint" href="#" style="display: none;">クリア</a>&nbsp;&nbsp;
+        <a class="brand" id="leave" href="#">戻る</a>
+        <div style="color: white; float:right;"> 
+          描画<input type="radio" name="mode" value="draw" checked/>
+          選択<input type="radio" name="mode" value="select"/>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="button" name="delete" value="削除"/>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="file" name="file" style="display: none;" accept="image/*"/>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div>
+    </div>
+    <div class="container" style="margin-top:60px; padding:initial; width:1024px; height:671px; border: 1px solid #ccc;">
+      <canvas id="canvas-node" class="canvas" style="" width="1024" height="671"></canvas>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/javascripts/purl.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/fabric.all.js"></script>
+    <script src="/javascripts/jquery.cookie.js"></script>
+    <script src="/javascripts/socket.io.js"></script>
+    <script src="/javascripts/paint.js"></script>
+    <script type="text/javascript">
+    $(function(){
+		if (isRoleAdmin()) {
+			$('#clearPaint').css('display', '');
+			$('input[type=file]').css('display', '');
+		}
+		// テスト用
+		$('input[type=file]').css('display', '');
+
+		var paint = new Paint('canvas-node');
+
+		var socket = io.connect("http://" + document.location.host + "/");
+		paint.setConnection(socket);
+
+		function isRoleAdmin() {
+			return ($.url().param('role') && $.url().param('role') === "1");
+		}
+    });
+    </script>
+  </body>
+</html>
